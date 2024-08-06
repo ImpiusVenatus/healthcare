@@ -22,6 +22,7 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
             patientId={patient?.$id}
             userId={userId}
             type="create"
+            timeZone="America/New_York"
           />
 
           <p className="copyright mt-10 py-12">© 2024 CarePluse</p>
