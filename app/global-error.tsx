@@ -1,12 +1,18 @@
 "use client";
 
 import NextError from "next/error";
+import { useEffect } from "react";
 
 export default function GlobalError({
   error,
 }: {
   error: Error & { digest?: string };
 }) {
+  useEffect(() => {
+    // Log the error to the console
+    console.error("Global error caught:", error);
+  }, [error]);
+
   return (
     <html>
       <body>
